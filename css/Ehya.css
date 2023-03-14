@@ -236,6 +236,7 @@ header nav ul li a:hover{
     .hero .main-text h1{
         font-size: 32px;
         margin-bottom: 40px;
+        line-height: 55px;
     }
     .hero .main-text p{
         font-size: 14px;
@@ -395,6 +396,7 @@ header nav ul li a:hover{
     text-align: center;
     letter-spacing: 0.3px;
     color: #034D82;
+    line-height: 52px;
 }
 .performance .main-desc{
     font-weight: 400;
@@ -452,6 +454,269 @@ header nav ul li a:hover{
     line-height: 24px;
 }
 /* end performance */
+/* start testimonials */
+.testimonials{
+    padding: var(--padding-gen) 0;
+}
+.testimonials .Container{
+    display: flex;
+    padding: 30px 15px;
+}
+.testimonials .text{
+    flex: 1 0 50%;
+}
+.testimonials .text h2{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 52px;
+    letter-spacing: 0.3px;
+    color: #034D82;
+    margin-top: 0;
+    max-width: 463px;
+}
+.testimonials .text p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.3px;
+    color: #90A3B4;
+}
+.testimonials .contain{
+    flex: 1 0 50%;
+}
+.testimonials .comments{
+    max-width: 442px;
+    margin: auto;
+}
+.testimonials .stars{
+    position: relative;
+    margin-bottom: 15px;
+}
+.testimonials .stars::before{
+    content: '';
+    background-image: url(../imgs/“.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    left: -56px;
+    top: -15px;
+}
+.testimonials .stars i{
+    color: rgba(250, 173, 19, 1);
+}
+.testimonials .comments q{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #90A3B4;
+    font-style: italic;
+}
+.testimonials .comments .person-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    position: relative;
+}
+.testimonials .comments .person-info::before,
+.testimonials .comments .person-info::after{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.testimonials .comments .person-info::before{
+    content: '\f104';
+    left: -59px;
+}
+.testimonials .comments .person-info:hover:before{
+    background-color: #034D82;
+    color: white;
+}
+.testimonials .comments .person-info::after{
+    content: '\f105';
+    right: -20px;
+    background-color: #034D82;
+    color: white;
+}
+.testimonials .comments .person-info .Job h4{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #034D82;
+    margin: 0 0 6px 0;
+}
+.testimonials .comments .person-info .Job p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;    
+    color: #90A3B4;
+    margin: 0;
+}
+.testimonials .comments .swap-view{
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+.testimonials .comments .swap-view .dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    background-color: #E2ECF4;
+}
+.testimonials .comments .swap-view .active{
+    background-color: #034D82;
+}
+@media (max-width:1200px) {
+    .testimonials .Container{
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+        text-align: center;
+    }
+    .testimonials .comments .person-info{
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .testimonials .comments .swap-view {
+        justify-content: center;
+    }
+}
+@media (max-width:767px) {
+    .testimonials .text h2{
+        font-size: 26px;
+    }
+    .testimonials .stars::before {
+        left: 0;
+    }
+    .testimonials .comments .person-info{
+        flex-direction: column;
+    }
+    .testimonials .comments .person-info::before{
+        left: 0;
+    }
+    .testimonials .comments .person-info::after{
+        right: 0;
+    }
+}
+/* end testimonials */
+/* start subscribe */
+.subscribe{
+    padding: var(--padding-gen) 0;
+}
+.subscribe .Container{
+    display: flex;
+    align-items: center;
+    background-color: var(--main-color);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    padding: 55px 20px;
+    position: relative;
+    overflow: hidden;
+}
+.group-42{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+.subscribe .info{
+    color: white;
+    flex: 1 0 50%;
+    padding-left: 54px;
+}
+.subscribe .info h2{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.3px;
+    max-width: 400px;
+    margin-top: 0;
+}
+.subscribe .info p{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 32px;
+    letter-spacing: 0.3px;
+}
+.subscribe .info .image{
+    display: flex;
+    align-items: center;
+}
+/* .subscribe .info .image img{
+    position: absolute;
+}
+.subscribe .info .image img:nth-child(2){
+    left: 20px;
+}
+.subscribe .info .image img:nth-child(3){
+    left: 40px;
+}
+.subscribe .info .image img:nth-child(4){
+    left: 60px;
+}
+.subscribe .info .image img:nth-child(5){
+    left: 80px;
+} */
+.subscribe .info .image span a{
+    text-decoration: underline;
+    color: white;
+    left: 140px;
+}
+.subscribe .info .image span a:hover{
+    color: black;
+}
+.subscribe .trial{
+    flex: 1 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.subscribe .trial a{
+    width: fit-content;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--main-color);
+    padding: 15px 30px;
+    background-color: white;
+    border-radius: 4px;
+    z-index: 1;
+}
+@media (max-width:992px) {
+    .subscribe .Container{
+        flex-direction: column;
+        gap: 60px;
+        text-align: center;
+    }
+    .subscribe .info{
+        padding: 0;
+        margin: auto;
+    }
+    .subscribe .info .image{
+        justify-content: center;
+    }
+}
+@media (max-width:767px) {
+    .subscribe .Container{
+        margin: auto 20px;
+    }
+    .subscribe .info h2 {
+        font-size: 28px;
+    }
+}
+/* end subscribe */
 /* Start Footer */
 .footer{
     padding: var(--padding-gen) 0;
